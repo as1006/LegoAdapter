@@ -1,17 +1,11 @@
 package com.xincubate.lego.sample
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
-import android.widget.TextView
 import com.xincubate.lego.adapter.core.BaseAdapter
-import com.xincubate.lego.adapter.core.BaseItem
-import com.xincubate.lego.adapter.core.BaseViewHolder
-import com.xincubate.lego.annotation.LegoRegister
-import com.xincubate.lego.layoutcenter.LayoutCenter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class GridActivity : AppCompatActivity() {

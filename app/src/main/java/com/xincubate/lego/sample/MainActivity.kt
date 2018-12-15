@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity() {
                 2 -> ActivityUtils.startActivity(HeaderListActivity::class.java)
                 3 -> ActivityUtils.startActivity(GridActivity::class.java)
                 4 -> ActivityUtils.startActivity(GroupListActivity::class.java)
+                5 -> ActivityUtils.startActivity(GroupGridActivity::class.java)
+                6 -> ActivityUtils.startActivity(BeanListActivity::class.java)
             }
         }
     }

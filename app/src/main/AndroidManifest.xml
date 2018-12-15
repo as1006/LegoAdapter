@@ -23,6 +23,7 @@
         <activity android:name=".GridActivity"/>
         <activity android:name=".GroupListActivity"/>
         <activity android:name=".GroupGridActivity"/>
+        <activity android:name=".BeanListActivity"/>
     </application>
 
 </manifest>

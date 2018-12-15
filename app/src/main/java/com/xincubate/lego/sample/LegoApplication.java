@@ -2,6 +2,7 @@ package com.xincubate.lego.sample;
 
 import android.app.Application;
 
+import com.xincubate.lego.adapter.group.BaseGroupAdapter;
 import com.xincubate.lego.sample.utils.LegoUtils;
 
 public class LegoApplication extends Application {

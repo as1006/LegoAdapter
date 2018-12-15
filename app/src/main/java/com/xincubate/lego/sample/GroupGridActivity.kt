@@ -14,6 +14,10 @@ import com.xincubate.lego.adapter.group.BaseGroupItem
 import com.xincubate.lego.annotation.LegoRegister
 import com.xincubate.lego.layoutcenter.LayoutCenter
 import kotlinx.android.synthetic.main.activity_main.*
+import com.xincubate.lego.sample.R.id.recyclerView
+import android.support.v7.widget.GridLayoutManager
+
+
 
 class GroupGridActivity : AppCompatActivity() {
 
@@ -25,15 +29,18 @@ class GroupGridActivity : AppCompatActivity() {
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.addItemDecoration(RecycleViewDivider(this, LinearLayoutManager.VERTICAL))
-
         val baseAdapter = BaseGroupAdapter(this)
+
+        val spanCount = 4
+        val layoutManager = GridLayoutManager(recyclerView.context, spanCount)
+        layoutManager.spanSizeLookup = baseAdapter.GroupSpanSizeLookup(spanCount)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.addItemDecoration(RecycleViewDivider(this, LinearLayoutManager.VERTICAL))
 
         for (i in 1..10){
 
             val children : ArrayList<BaseItem> = ArrayList()
-            for (j in 1..5){
+            for (j in 1..7){
                 children.add(ListActivity.SimpleListItem(this,i*100+j))
             }
 

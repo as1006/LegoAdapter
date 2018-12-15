@@ -1,6 +1,7 @@
 package com.xincubate.lego.adapter.group;
 
 import android.content.Context;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -140,7 +141,6 @@ public class BaseGroupAdapter extends RecyclerView.Adapter<BaseViewHolder>{
         return totalCount;
     }
 
-
     public boolean isGroupPosition(int position){
         if (position == 0){
             return true;
@@ -191,5 +191,20 @@ public class BaseGroupAdapter extends RecyclerView.Adapter<BaseViewHolder>{
         mGroupItems.clear();
         addGroupItems(list);
         notifyDataSetChanged();
+    }
+
+    /**
+     * 设置Group与child在GridLayoutManager情况下占用的格子
+     */
+    public class GroupSpanSizeLookup extends GridLayoutManager.SpanSizeLookup{
+        private int maxSize;
+        public GroupSpanSizeLookup(int maxSize) {
+            this.maxSize = maxSize;
+        }
+
+        @Override
+        public int getSpanSize(int position) {
+            return isGroupPosition(position) ? maxSize : 1;
+        }
     }
 }
