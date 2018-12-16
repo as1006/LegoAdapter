@@ -4,14 +4,12 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.widget.TextView
 import com.blankj.utilcode.util.ActivityUtils
 import com.xincubate.lego.adapter.core.BaseAdapter
 import com.xincubate.lego.adapter.core.BaseItem
 import com.xincubate.lego.adapter.core.BaseViewHolder
-import com.xincubate.lego.annotation.LegoRegister
-import com.xincubate.lego.layoutcenter.LayoutCenter
+import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -34,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = baseAdapter
     }
 
-    @LegoRegister
+    @LegoItem
     class KindItem(context: Context,val title:String,val id:Int) : BaseItem(context) {
 
         override fun onBindViewHolder(viewHolder: BaseViewHolder, position: Int) {

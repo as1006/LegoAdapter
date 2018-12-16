@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
-import android.widget.TextView
 import com.xincubate.lego.adapter.core.BaseAdapter
 import com.xincubate.lego.adapter.core.BaseItem
 import com.xincubate.lego.adapter.core.BaseViewHolder
-import com.xincubate.lego.annotation.LegoRegister
-import com.xincubate.lego.layoutcenter.LayoutCenter
+import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class HeaderListActivity : AppCompatActivity() {
@@ -43,7 +41,7 @@ class HeaderListActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    @LegoRegister
+    @LegoItem
     class HeaderItem(context: Context) : BaseItem(context){
         override fun onBindViewHolder(viewHolder: BaseViewHolder, position: Int) {
 
@@ -55,7 +53,7 @@ class HeaderListActivity : AppCompatActivity() {
 
     }
 
-    @LegoRegister
+    @LegoItem
     class FooterItem(context: Context) : BaseItem(context){
         override fun onBindViewHolder(viewHolder: BaseViewHolder, position: Int) {
 

@@ -1,15 +1,15 @@
 package com.xincubate.lego.processor;
 
 import com.google.auto.service.AutoService;
+import com.squareup.javapoet.ImportSpec;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
-import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import com.xincubate.lego.annotation.LegoRegister;
+import com.xincubate.lego.annotation.LegoBean;
+import com.xincubate.lego.annotation.LegoItem;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -25,6 +25,8 @@ import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
+import javax.lang.model.type.DeclaredType;
+import javax.lang.model.type.MirroredTypeException;
 import javax.lang.model.util.Elements;
 import javax.lang.model.util.Types;
 import javax.tools.Diagnostic;
@@ -49,7 +51,8 @@ public class RegisterProcessor extends AbstractProcessor {
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         HashSet<String> supportTypes = new LinkedHashSet<>();
-        supportTypes.add(LegoRegister.class.getCanonicalName());
+        supportTypes.add(LegoItem.class.getCanonicalName());
+        supportTypes.add(LegoBean.class.getCanonicalName());
         return supportTypes;
     }
 
@@ -62,23 +65,41 @@ public class RegisterProcessor extends AbstractProcessor {
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnvironment) {
         mMessager.printMessage(Diagnostic.Kind.NOTE, "processing...");
 
-        Set<? extends Element> elements = roundEnvironment.getElementsAnnotatedWith(LegoRegister.class);
-        MethodSpec.Builder initMethodBuilder = MethodSpec.constructorBuilder()
-                .addModifiers(Modifier.PUBLIC);
-        initMethodBuilder.addStatement("items = new $T()",ArrayList.class);
 
+        MethodSpec.Builder initMethodBuilder = MethodSpec.methodBuilder("init")
+                .addModifiers(Modifier.PUBLIC,Modifier.STATIC);
+
+        Set<? extends Element> elements = roundEnvironment.getElementsAnnotatedWith(LegoItem.class);
         for (Element element : elements){
             TypeElement typeElement = (TypeElement) element;
-            initMethodBuilder.addStatement("items.add($T.class)",mTypeUtils.getDeclaredType(typeElement));
+            initMethodBuilder.addStatement("LayoutCenter.getInstance().registerViewType($T.class)",mTypeUtils.getDeclaredType(typeElement));
         }
 
-        TypeSpec finderClass = TypeSpec.classBuilder("LegoRegisterItems")
+        elements = roundEnvironment.getElementsAnnotatedWith(LegoBean.class);
+        for (Element element : elements){
+            TypeElement typeElement = (TypeElement) element;
+            LegoBean legoBean = element.getAnnotation(LegoBean.class);
+
+            try {
+                legoBean.clazz();
+            }catch (MirroredTypeException mte) {
+                DeclaredType classTypeMirror = (DeclaredType) mte.getTypeMirror();
+                initMethodBuilder.addStatement("LayoutCenter.getInstance().registerItemBuilder($T.class, new ItemBuilder<$T>() {\npublic BaseItem build(Context context, $T bean) {\nreturn new $T(context,bean);\n}})",mTypeUtils.getDeclaredType(typeElement),mTypeUtils.getDeclaredType(typeElement),mTypeUtils.getDeclaredType(typeElement),classTypeMirror);
+            }
+
+        }
+
+        TypeSpec finderClass = TypeSpec.classBuilder("LegoRegisterUtils")
                 .addModifiers(Modifier.PUBLIC)
-                .addField(List.class,"items",Modifier.PUBLIC)
                 .addMethod(initMethodBuilder.build())
                 .build();
         try {
-            JavaFile.builder("com.xincubate.lego.generate", finderClass).build().writeTo(mFiler);
+            JavaFile.builder("com.xincubate.lego.generate", finderClass)
+                    .addManualImport(new ImportSpec.Builder("com.xincubate.lego.layoutcenter.LayoutCenter").build())
+                    .addManualImport(new ImportSpec.Builder("android.content.Context").build())
+                    .addManualImport(new ImportSpec.Builder("com.xincubate.lego.adapter.bean.ItemBuilder").build())
+                    .addManualImport(new ImportSpec.Builder("com.xincubate.lego.adapter.core.BaseItem").build())
+                    .build().writeTo(mFiler);
         } catch (IOException e) {
             e.printStackTrace();
         }

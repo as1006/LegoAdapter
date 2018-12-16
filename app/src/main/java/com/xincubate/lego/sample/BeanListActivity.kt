@@ -8,10 +8,10 @@ import android.view.MenuItem
 import android.widget.TextView
 import com.xincubate.lego.adapter.bean.BaseBeanAdapter
 import com.xincubate.lego.adapter.bean.ItemBuilder
-import com.xincubate.lego.adapter.core.BaseAdapter
 import com.xincubate.lego.adapter.core.BaseItem
 import com.xincubate.lego.adapter.core.BaseViewHolder
-import com.xincubate.lego.annotation.LegoRegister
+import com.xincubate.lego.annotation.LegoBean
+import com.xincubate.lego.annotation.LegoItem
 import com.xincubate.lego.layoutcenter.LayoutCenter
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,13 +20,6 @@ class BeanListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
-
-        LayoutCenter.getInstance().registerItemBuilder(ListBean::class.java,object : ItemBuilder<ListBean>{
-            override fun build(context: Context?, bean: ListBean?): BaseItem {
-                return ListActivity.SimpleListItem(this@BeanListActivity,bean!!.index)
-            }
-
-        })
 
         title = "Bean列表"
         supportActionBar?.setHomeButtonEnabled(true)
@@ -50,6 +43,22 @@ class BeanListActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-
+    @LegoBean(clazz = SimpleBeanListItem::class)
     data class ListBean(var index : Int)
+
+    @LegoItem
+    class SimpleBeanListItem(context: Context,val bean:ListBean) : BaseItem(context) {
+
+        override fun onBindViewHolder(viewHolder: BaseViewHolder, position: Int) {
+            viewHolder.findViewById<TextView>(R.id.tv_title).text = "第${bean.index}条记录"
+        }
+
+        override fun getLayoutId(): Int {
+            return R.layout.listitem_kind
+        }
+
+        override fun onClick() {
+
+        }
+    }
 }

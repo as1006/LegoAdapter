@@ -30,11 +30,11 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation "com.android.support:recyclerview-v7:28.0.0"
     implementation 'com.blankj:utilcode:1.22.1'
-    implementation project(":lego")
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation project(":lego")
     implementation project(':lego-annotations')
-//    implementation project(':apt-library')
     kapt project(':lego-compiler')
 }
 repositories {

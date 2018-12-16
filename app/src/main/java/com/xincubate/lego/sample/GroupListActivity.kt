@@ -10,7 +10,7 @@ import com.xincubate.lego.adapter.core.BaseItem
 import com.xincubate.lego.adapter.core.BaseViewHolder
 import com.xincubate.lego.adapter.group.BaseGroupAdapter
 import com.xincubate.lego.adapter.group.BaseGroupItem
-import com.xincubate.lego.annotation.LegoRegister
+import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class GroupListActivity : AppCompatActivity() {
@@ -51,7 +51,7 @@ class GroupListActivity : AppCompatActivity() {
     }
 
 
-    @LegoRegister
+    @LegoItem
     class SimpleGroupListItem(context: Context,children : List<BaseItem>,val id:Int) : BaseGroupItem(context,children) {
 
         override fun onBindViewHolder(viewHolder: BaseViewHolder, position: Int) {

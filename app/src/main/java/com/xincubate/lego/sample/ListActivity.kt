@@ -9,8 +9,7 @@ import android.widget.TextView
 import com.xincubate.lego.adapter.core.BaseAdapter
 import com.xincubate.lego.adapter.core.BaseItem
 import com.xincubate.lego.adapter.core.BaseViewHolder
-import com.xincubate.lego.annotation.LegoRegister
-import com.xincubate.lego.layoutcenter.LayoutCenter
+import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class ListActivity : AppCompatActivity() {
@@ -42,7 +41,7 @@ class ListActivity : AppCompatActivity() {
     }
 
 
-    @LegoRegister
+    @LegoItem
     class SimpleListItem(context: Context,val id:Int) : BaseItem(context) {
 
         override fun onBindViewHolder(viewHolder: BaseViewHolder, position: Int) {

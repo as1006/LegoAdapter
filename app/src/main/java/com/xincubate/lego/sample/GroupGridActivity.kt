@@ -6,15 +6,12 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
 import android.widget.TextView
-import com.xincubate.lego.adapter.core.BaseAdapter
 import com.xincubate.lego.adapter.core.BaseItem
 import com.xincubate.lego.adapter.core.BaseViewHolder
 import com.xincubate.lego.adapter.group.BaseGroupAdapter
 import com.xincubate.lego.adapter.group.BaseGroupItem
-import com.xincubate.lego.annotation.LegoRegister
-import com.xincubate.lego.layoutcenter.LayoutCenter
+import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
-import com.xincubate.lego.sample.R.id.recyclerView
 import android.support.v7.widget.GridLayoutManager
 
 
@@ -60,7 +57,7 @@ class GroupGridActivity : AppCompatActivity() {
     }
 
 
-    @LegoRegister
+    @LegoItem
     class SimpleGroupListItem(context: Context,children : List<BaseItem>,val id:Int) : BaseGroupItem(context,children) {
 
         override fun onBindViewHolder(viewHolder: BaseViewHolder, position: Int) {
