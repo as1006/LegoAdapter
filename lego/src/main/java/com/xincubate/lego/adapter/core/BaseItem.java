@@ -3,10 +3,11 @@ package com.xincubate.lego.adapter.core;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
 
 import com.xincubate.lego.adapter.bridge.BridgeEntity;
 import com.xincubate.lego.adapter.bridge.ItemBridge;
+
+import androidx.annotation.NonNull;
 
 public abstract class BaseItem implements BridgeEntity{
 

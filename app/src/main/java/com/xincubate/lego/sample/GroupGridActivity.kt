@@ -2,17 +2,17 @@ package com.xincubate.lego.sample
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.xincubate.lego.adapter.core.BaseItem
 import com.xincubate.lego.adapter.core.BaseViewHolder
 import com.xincubate.lego.adapter.group.BaseGroupAdapter
 import com.xincubate.lego.adapter.group.BaseGroupItem
 import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
-import android.support.v7.widget.GridLayoutManager
 
 
 

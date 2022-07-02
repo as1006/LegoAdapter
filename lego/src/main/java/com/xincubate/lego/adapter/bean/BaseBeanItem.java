@@ -1,10 +1,11 @@
 package com.xincubate.lego.adapter.bean;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 
 import com.xincubate.lego.adapter.core.BaseItem;
 import com.xincubate.lego.adapter.core.BaseViewHolder;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by asherchen(陈凌明) on 2018/11/15.

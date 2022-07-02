@@ -1,8 +1,9 @@
 package com.xincubate.lego.adapter.core;
 
-import android.support.v7.util.DiffUtil;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.DiffUtil;
 
 /**
  * Created by loganpluo on 2018/8/4.

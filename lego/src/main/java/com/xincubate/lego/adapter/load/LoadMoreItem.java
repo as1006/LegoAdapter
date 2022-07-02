@@ -1,12 +1,13 @@
 package com.xincubate.lego.adapter.load;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.xincubate.lego.R;
 import com.xincubate.lego.adapter.core.BaseItem;
 import com.xincubate.lego.adapter.core.BaseViewHolder;
+
+import androidx.annotation.NonNull;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
