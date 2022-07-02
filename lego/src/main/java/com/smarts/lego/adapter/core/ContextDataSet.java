@@ -1,4 +1,4 @@
-package com.xincubate.lego.adapter.core;
+package com.smarts.lego.adapter.core;
 
 /**
  * Created by asherchen(陈凌明) on 2018/12/5.

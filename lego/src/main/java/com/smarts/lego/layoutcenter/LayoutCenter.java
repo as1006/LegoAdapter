@@ -1,11 +1,11 @@
-package com.xincubate.lego.layoutcenter;
+package com.smarts.lego.layoutcenter;
 
 import android.content.Context;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 
-import com.xincubate.lego.adapter.bean.ItemBuilder;
-import com.xincubate.lego.adapter.core.BaseItem;
+import com.smarts.lego.adapter.bean.ItemBuilder;
+import com.smarts.lego.adapter.core.BaseItem;
 
 import java.util.HashMap;
 import java.util.Map;

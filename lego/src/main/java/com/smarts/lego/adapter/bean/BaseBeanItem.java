@@ -1,9 +1,9 @@
-package com.xincubate.lego.adapter.bean;
+package com.smarts.lego.adapter.bean;
 
 import android.content.Context;
 
-import com.xincubate.lego.adapter.core.BaseItem;
-import com.xincubate.lego.adapter.core.BaseViewHolder;
+import com.smarts.lego.adapter.core.BaseItem;
+import com.smarts.lego.adapter.core.BaseViewHolder;
 
 import androidx.annotation.NonNull;
 

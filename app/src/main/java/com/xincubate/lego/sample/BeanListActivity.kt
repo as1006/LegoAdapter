@@ -6,13 +6,11 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.xincubate.lego.adapter.bean.BaseBeanAdapter
-import com.xincubate.lego.adapter.bean.ItemBuilder
-import com.xincubate.lego.adapter.core.BaseItem
-import com.xincubate.lego.adapter.core.BaseViewHolder
+import com.smarts.lego.adapter.bean.BaseBeanAdapter
+import com.smarts.lego.adapter.core.BaseItem
+import com.smarts.lego.adapter.core.BaseViewHolder
 import com.xincubate.lego.annotation.LegoBean
 import com.xincubate.lego.annotation.LegoItem
-import com.xincubate.lego.layoutcenter.LayoutCenter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class BeanListActivity : AppCompatActivity() {

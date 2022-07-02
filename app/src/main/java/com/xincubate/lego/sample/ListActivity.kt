@@ -6,9 +6,9 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.xincubate.lego.adapter.core.BaseAdapter
-import com.xincubate.lego.adapter.core.BaseItem
-import com.xincubate.lego.adapter.core.BaseViewHolder
+import com.smarts.lego.adapter.core.BaseAdapter
+import com.smarts.lego.adapter.core.BaseItem
+import com.smarts.lego.adapter.core.BaseViewHolder
 import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
 

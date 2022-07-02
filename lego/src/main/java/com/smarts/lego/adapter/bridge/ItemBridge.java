@@ -1,4 +1,4 @@
-package com.xincubate.lego.adapter.bridge;
+package com.smarts.lego.adapter.bridge;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.xincubate.lego.adapter.core;
+package com.smarts.lego.adapter.core;
 
 
 import java.util.List;

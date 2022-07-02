@@ -1,8 +1,8 @@
-package com.xincubate.lego.adapter.group;
+package com.smarts.lego.adapter.group;
 
 import android.content.Context;
 
-import com.xincubate.lego.adapter.core.BaseItem;
+import com.smarts.lego.adapter.core.BaseItem;
 
 import java.util.List;
 

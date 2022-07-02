@@ -1,4 +1,4 @@
-package com.xincubate.lego.adapter.bridge;
+package com.smarts.lego.adapter.bridge;
 
 /**
  * Created by asherchen(陈凌明) on 2018/11/21.

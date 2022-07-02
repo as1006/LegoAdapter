@@ -1,4 +1,4 @@
-package com.xincubate.lego.adapter.bean;
+package com.smarts.lego.adapter.bean;
 
 /**
  * Created by loganpluo on 2018/11/27.
@@ -6,7 +6,7 @@ package com.xincubate.lego.adapter.bean;
 
 import android.content.Context;
 
-import com.xincubate.lego.adapter.core.BaseItem;
+import com.smarts.lego.adapter.core.BaseItem;
 
 /**
  * Bean到Item的转化器，需要在app或者module初始化的时候，往

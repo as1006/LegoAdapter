@@ -1,10 +1,10 @@
-package com.xincubate.lego.adapter.load;
+package com.smarts.lego.adapter.load;
 
 
 import android.content.Context;
 
-import com.xincubate.lego.adapter.core.BaseAdapter;
-import com.xincubate.lego.adapter.core.BaseItem;
+import com.smarts.lego.adapter.core.BaseAdapter;
+import com.smarts.lego.adapter.core.BaseItem;
 
 import java.util.List;
 

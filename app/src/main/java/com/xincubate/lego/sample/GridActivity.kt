@@ -5,7 +5,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.xincubate.lego.adapter.core.BaseAdapter
+import com.smarts.lego.adapter.core.BaseAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class GridActivity : AppCompatActivity() {
