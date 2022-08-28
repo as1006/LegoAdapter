@@ -28,7 +28,40 @@ dependencies {
 
     api 'androidx.appcompat:appcompat:1.0.0'
     api 'androidx.recyclerview:recyclerview:1.0.0'
+}
 
 
-//    implementation project(':lego-annotations')
+apply plugin: 'maven-publish' // Apply this plugin at the top of your library build.gradle
+
+def githubProperties = new Properties()
+githubProperties.load(new FileInputStream(rootProject.file("github.properties"))) //Set env variable GPR_USER & GPR_API_KEY if not adding a properties file
+
+def getVersionName = { ->
+    return "0.1.0" // Replace with version Name
+}
+
+def getArtificatId = { ->
+    return "lego" // Replace with library name ID
+}
+
+publishing {
+    publications {
+        bar(MavenPublication) {
+            groupId 'com.stars.kit' // Replace with group ID
+            artifactId getArtificatId()
+            version getVersionName()
+            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "as1006"
+            url = uri("https://maven.pkg.github.com/as1006/LegoAdapter")
+            credentials {
+                username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
+                password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
+            }
+        }
+    }
 }
