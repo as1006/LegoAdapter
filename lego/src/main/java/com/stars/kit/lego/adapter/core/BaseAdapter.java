@@ -1,4 +1,4 @@
-package com.smarts.lego.adapter.core;
+package com.stars.kit.lego.adapter.core;
 
 import android.content.Context;
 import android.util.Log;
@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.smarts.lego.adapter.bridge.ItemBridge;
-import com.smarts.lego.layoutcenter.LayoutCenter;
+import com.stars.kit.lego.adapter.bridge.ItemBridge;
+import com.stars.kit.lego.layoutcenter.LayoutCenter;
 
 import java.util.ArrayList;
 import java.util.HashMap;

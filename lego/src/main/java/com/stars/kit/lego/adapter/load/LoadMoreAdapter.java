@@ -1,10 +1,10 @@
-package com.smarts.lego.adapter.load;
+package com.stars.kit.lego.adapter.load;
 
 
 import android.content.Context;
 
-import com.smarts.lego.adapter.core.BaseAdapter;
-import com.smarts.lego.adapter.core.BaseItem;
+import com.stars.kit.lego.adapter.core.BaseAdapter;
+import com.stars.kit.lego.adapter.core.BaseItem;
 
 import java.util.List;
 

@@ -7,10 +7,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.smarts.lego.adapter.core.BaseItem
-import com.smarts.lego.adapter.core.BaseViewHolder
-import com.smarts.lego.adapter.group.BaseGroupAdapter
-import com.smarts.lego.adapter.group.BaseGroupItem
+import com.stars.kit.lego.adapter.core.BaseItem
+import com.stars.kit.lego.adapter.core.BaseViewHolder
+import com.stars.kit.lego.adapter.group.BaseGroupAdapter
+import com.stars.kit.lego.adapter.group.BaseGroupItem
 import com.xincubate.lego.annotation.LegoItem
 import kotlinx.android.synthetic.main.activity_main.*
 

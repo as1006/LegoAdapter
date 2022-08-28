@@ -1,17 +1,16 @@
-package com.smarts.lego.adapter.bean;
+package com.stars.kit.lego.adapter.bean;
 
 import android.content.Context;
 
-import com.smarts.lego.adapter.core.BaseAdapter;
-import com.smarts.lego.adapter.core.BaseItem;
-import com.smarts.lego.layoutcenter.LayoutCenter;
+import com.stars.kit.lego.adapter.core.BaseAdapter;
+import com.stars.kit.lego.adapter.core.BaseItem;
+import com.stars.kit.lego.layoutcenter.LayoutCenter;
 
 import java.util.List;
 
 /**
- * Created by asherchen(陈凌明) on 2018/11/15.
- * 游戏平台部
- * 基于Bean的BaseAdapter
+ * Created by asherchen on 2018/11/15.
+ * 基于Bean的BaseAdapter，可以直接传入Bean类型完成列表展示
  */
 public class BaseBeanAdapter extends BaseAdapter {
 

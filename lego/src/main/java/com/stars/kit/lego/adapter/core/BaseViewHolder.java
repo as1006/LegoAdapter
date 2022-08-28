@@ -1,4 +1,4 @@
-package com.smarts.lego.adapter.core;
+package com.stars.kit.lego.adapter.core;
 
 import android.util.SparseArray;
 import android.view.View;

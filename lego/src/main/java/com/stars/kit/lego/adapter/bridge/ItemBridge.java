@@ -1,4 +1,4 @@
-package com.smarts.lego.adapter.bridge;
+package com.stars.kit.lego.adapter.bridge;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,8 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by asherchen(陈凌明) on 2018/11/21.
- * 游戏平台部
+ * Created by asherchen on 2018/11/21.
  * Item之间的通信中心
  */
 public class ItemBridge {

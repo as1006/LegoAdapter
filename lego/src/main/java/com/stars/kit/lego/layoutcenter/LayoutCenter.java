@@ -1,11 +1,11 @@
-package com.smarts.lego.layoutcenter;
+package com.stars.kit.lego.layoutcenter;
 
 import android.content.Context;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 
-import com.smarts.lego.adapter.bean.ItemBuilder;
-import com.smarts.lego.adapter.core.BaseItem;
+import com.stars.kit.lego.adapter.bean.ItemBuilder;
+import com.stars.kit.lego.adapter.core.BaseItem;
 
 import java.util.HashMap;
 import java.util.Map;

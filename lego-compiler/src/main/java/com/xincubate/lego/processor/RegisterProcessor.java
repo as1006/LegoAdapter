@@ -95,10 +95,10 @@ public class RegisterProcessor extends AbstractProcessor {
                 .build();
         try {
             JavaFile.builder("com.xincubate.lego.generate", finderClass)
-                    .addManualImport(new ImportSpec.Builder("com.smarts.lego.layoutcenter.LayoutCenter").build())
+                    .addManualImport(new ImportSpec.Builder("com.stars.kit.lego.layoutcenter.LayoutCenter").build())
                     .addManualImport(new ImportSpec.Builder("android.content.Context").build())
-                    .addManualImport(new ImportSpec.Builder("com.smarts.lego.adapter.bean.ItemBuilder").build())
-                    .addManualImport(new ImportSpec.Builder("com.smarts.lego.adapter.core.BaseItem").build())
+                    .addManualImport(new ImportSpec.Builder("com.stars.kit.lego.adapter.bean.ItemBuilder").build())
+                    .addManualImport(new ImportSpec.Builder("com.stars.kit.lego.adapter.core.BaseItem").build())
                     .build().writeTo(mFiler);
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,11 +1,11 @@
-package com.smarts.lego.adapter.core;
+package com.stars.kit.lego.adapter.core;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.smarts.lego.adapter.bridge.BridgeEntity;
-import com.smarts.lego.adapter.bridge.ItemBridge;
+import com.stars.kit.lego.adapter.bridge.BridgeEntity;
+import com.stars.kit.lego.adapter.bridge.ItemBridge;
 
 import androidx.annotation.NonNull;
 

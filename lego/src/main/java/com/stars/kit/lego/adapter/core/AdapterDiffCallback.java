@@ -1,4 +1,4 @@
-package com.smarts.lego.adapter.core;
+package com.stars.kit.lego.adapter.core;
 
 
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import androidx.recyclerview.widget.DiffUtil;
 
 /**
- * Created by loganpluo on 2018/8/4.
+ * Created by asherchen on 2018/8/4.
  */
 
 public class AdapterDiffCallback<Item> extends DiffUtil.Callback {

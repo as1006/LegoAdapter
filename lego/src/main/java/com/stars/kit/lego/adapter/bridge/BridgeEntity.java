@@ -1,8 +1,7 @@
-package com.smarts.lego.adapter.bridge;
+package com.stars.kit.lego.adapter.bridge;
 
 /**
- * Created by asherchen(陈凌明) on 2018/11/21.
- * 游戏平台部
+ * Created by asherchen on 2018/11/21.
  * Item通信实体
  */
 public interface BridgeEntity {

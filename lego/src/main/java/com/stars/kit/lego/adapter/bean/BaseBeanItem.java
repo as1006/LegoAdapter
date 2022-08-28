@@ -1,14 +1,14 @@
-package com.smarts.lego.adapter.bean;
+package com.stars.kit.lego.adapter.bean;
 
 import android.content.Context;
 
-import com.smarts.lego.adapter.core.BaseItem;
-import com.smarts.lego.adapter.core.BaseViewHolder;
+import com.stars.kit.lego.adapter.core.BaseItem;
+import com.stars.kit.lego.adapter.core.BaseViewHolder;
 
 import androidx.annotation.NonNull;
 
 /**
- * Created by asherchen(陈凌明) on 2018/11/15.
+ * Created by asherchen on 2018/11/15.
  * 游戏平台部
  */
 public abstract class BaseBeanItem<T> extends BaseItem{

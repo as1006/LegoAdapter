@@ -1,11 +1,11 @@
-package com.smarts.lego.adapter.load;
+package com.stars.kit.lego.adapter.load;
 
 import android.content.Context;
 import android.view.View;
 
-import com.xincubate.lego.R;
-import com.smarts.lego.adapter.core.BaseItem;
-import com.smarts.lego.adapter.core.BaseViewHolder;
+import com.stars.kit.lego.R;
+import com.stars.kit.lego.adapter.core.BaseItem;
+import com.stars.kit.lego.adapter.core.BaseViewHolder;
 
 import androidx.annotation.NonNull;
 
